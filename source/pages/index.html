@@ -42,33 +42,48 @@
     </header>
     <main class="page">
       <div class="container">
-        <div class="two-block">
-          <div class="two-block__row">
-            <div class="two-block__column">
-              <div class="two-block__info">
-                <p class="percent">100%</p>
-                <p class="insurance"></p>
-                <p class="text"></p>
-                <button class="btn-play">играть без риска</button>
-              </div>
-              <div class="two-block__player-img">
-                <img src="../img/player.jpg" alt="player">
-              </div>
+        <div class="two-block__row">
+          <div class="two-block__info col">
+            <div class="percent">
+              <p>100%</p>
             </div>
+            <div class="insurance">
+              <p class="insurance__itext-1">страховка</p>
+              <p class="insurance__itext-2">первой ставки</p>
+            </div>
+            <div class="description">
+              <p class="description__dtext-1">Cтань клиентом bwin и получи фрибет</p>
+              <p class="description__dtext-2">на сумму первой ставки, если она не сыграет</p>
+            </div>
+            <button class="btn-play" onclick="console.log('Button clicked')">Играть без риска</button>
+          </div>
+          <!-- <div class="two-block__info col">
+            <h1 class="percent">100%</h1>
+            <p class="insurance">страховка первой ставки</p>
+            <p class="text">Cтань клиентом bwin и получи фрибет<br> на сумму первой ставки, если она не сыграет</p>
+            <button class="btn-play">Играть без риска</button>
+          </div> -->
+          <div class="two-block__player-img col">
+            <img src="../img/player.png" alt="player">
           </div>
           <!-- <div class="two-block__info">
-            <p class="percent">100%</p>
-            <p class="insurance"></p>
-            <p class="text"></p>
-            <button class="btn-play">играть без риска</button>
-          </div>
-          <div class="two-block__player-img">
-            <img src="../img/player.jpg" alt="player">
+            <div class="percent">
+              <p>100%</p>
+            </div>
+            <div class="insurance">
+              <p class="insurance__itext-1">страховка</p>
+              <p class="insurance__itext-2">первой ставки</p>
+            </div>
+            <div class="description">
+              <p class="description__dtext-1">Cтань клиентом bwin и получи фрибет</p>
+              <p class="description__dtext-2">на сумму первой ставки, если она не сыграет</p>
+            </div>
+              <button class="btn-play">Играть без риска</button>
           </div> -->
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
         <div class="three-block">
           <div class="three-block__store">
@@ -76,7 +91,7 @@
             <img src="../img/google.png" alt="google">
           </div>
           <div class="three-block__regulations">
-            <p>Правила и условия</p>
+            <p class="popup-link">Правила и условия</p>
           </div>
           <div class="three-block__icons-team">
             <img src="../img/madrid.svg" alt="AM">
@@ -87,8 +102,49 @@
         </div>
       </div>
     </footer>
+    <div id="popup" class="popup"></div>
   </div>
-  <script src="../js/script.js"></script>
+  <!-- <script src="../js/script.js"></script> -->
+  <!-- <script>
+    var lines = document.querySelectorAll(".insurance__itext-1");
+    // var appendages = document.querySelectorAll(".append");
+
+    var wrapCharacters = function (lines) {
+      return lines.forEach(function (line) {
+        var characters = line.innerHTML.split("");
+        var wrappedCharacters = characters
+          .map(function (character) {
+            if (character === " ") {
+              return '<span class="texts">&nbsp;</span>';
+            }
+            return '<span class="texts">' + character + "</span>";
+          })
+          .join("");
+        return (line.innerHTML = wrappedCharacters);
+      });
+    };
+
+    var useSiblingFontSize = function (elem) {
+      elem.style.fontSize = elem.previousSibling.style.fontSize;
+    };
+
+    var setFontSize = function (elems) {
+      return elems.forEach(function (elem) {
+        if (!elem.classList.contains("append")) {
+          return (elem.style.fontSize = 67 / elem.innerHTML.length + "vw");
+        }
+        return useSiblingFontSize(elem);
+      });
+    };
+
+    var formatTextBlocks = function () {
+      setFontSize(lines);
+      // setFontSize(appendages);
+      wrapCharacters(lines);
+    };
+
+    formatTextBlocks();
+  </script> -->
 </body>
 
 </html>
