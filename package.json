@@ -24,5 +24,8 @@
     "pump": "^3.0.0"
   },
   "author": "Anna Dmitrieva",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0"
+  }
 }

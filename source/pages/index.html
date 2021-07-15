@@ -84,14 +84,14 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="container">
+      <div class="ft-container">
         <div class="three-block">
           <div class="three-block__store">
             <img src="../img/app_store.png" alt="apple">
             <img src="../img/google.png" alt="google">
           </div>
           <div class="three-block__regulations">
-            <p class="popup-link">Правила и условия</p>
+            <a href="#popup" class="popup-link">Правила и условия</a>
           </div>
           <div class="three-block__icons-team">
             <img src="../img/madrid.svg" alt="AM">
@@ -102,49 +102,48 @@
         </div>
       </div>
     </footer>
-    <div id="popup" class="popup"></div>
   </div>
-  <!-- <script src="../js/script.js"></script> -->
-  <!-- <script>
-    var lines = document.querySelectorAll(".insurance__itext-1");
-    // var appendages = document.querySelectorAll(".append");
-
-    var wrapCharacters = function (lines) {
-      return lines.forEach(function (line) {
-        var characters = line.innerHTML.split("");
-        var wrappedCharacters = characters
-          .map(function (character) {
-            if (character === " ") {
-              return '<span class="texts">&nbsp;</span>';
-            }
-            return '<span class="texts">' + character + "</span>";
-          })
-          .join("");
-        return (line.innerHTML = wrappedCharacters);
-      });
-    };
-
-    var useSiblingFontSize = function (elem) {
-      elem.style.fontSize = elem.previousSibling.style.fontSize;
-    };
-
-    var setFontSize = function (elems) {
-      return elems.forEach(function (elem) {
-        if (!elem.classList.contains("append")) {
-          return (elem.style.fontSize = 67 / elem.innerHTML.length + "vw");
-        }
-        return useSiblingFontSize(elem);
-      });
-    };
-
-    var formatTextBlocks = function () {
-      setFontSize(lines);
-      // setFontSize(appendages);
-      wrapCharacters(lines);
-    };
-
-    formatTextBlocks();
-  </script> -->
+  <div id="popup" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <a href="" class="popup__close">X</a>
+        <div class="popup__title">
+          <p>Правила и условия</p>
+        </div>
+        <div class="all">
+          <div class="popup__text">
+            <p>Букмекерская контора Bwin предлагает всем своим новым клиентам беспроигрышную сделку. Если ваша первая
+              ставка на сайте букмекера окажется неудачной, компания вернет проигранную сумму в полном объеме в качестве
+              фрибета. Этот бонус можно использовать для заключения нового пари, чистый выигрыш с которого достанется
+              вам.
+              Правда, у кэшбека Bwin есть ограничение – максимальная сумма, которую готов компенсировать букмекер, равна
+              2000 рублей.</p>
+          </div>
+          <div class="popup__item">
+            <p class="popup__title">Как это работает</p>
+            <ul class="popup__text">
+              <li><span>Вы регистрируетесь на сайте БК Bwin и проходите процедуру идентификации личности</span></li>
+              <li><span>Делаете первую ставку на реальные деньги</span></li>
+              <li><span>Если проигрываете, получаете свои деньги назад в течение 30 минут с момента расчета</span></li>
+              <li><span>Условия акции распространяются на все типы пари, кроме «суперкоэффициентов» и «комбо+»</span>
+              </li>
+              <li><span>Полученный фрибет нужно использовать в течение 7 дней с момента его предоставления</span></li>
+            </ul>
+          </div>
+          <div class="popup__item">
+            <p class="popup__title">Важные правила</p>
+            <ul class="popup__text">
+              <li><span>В акции могут участвовать только новые пользователи или пользователи, которые до этого не делали
+                  ни одной ставки</span></li>
+              <li><span>Фрибет можно использовать только в мобильных приложениях Bwin для iOS и Android</span></li>
+              <li><span>Один игрок может получить только один фрибет</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

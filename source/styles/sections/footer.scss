@@ -2,19 +2,54 @@
     min-height: 104px;
     background: #0e0e0e;
 
-    display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: center;
-}
+    .ft-container {
+        height: 100%;
+        max-width: 1296px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+    }
 
-.three-block {
-    min-width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    .three-block {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    &__regulations {
-        color: #ffffff;
+        &__store {
+            img {
+                padding: 0 7px;
+            }
+        }
+
+        &__regulations {
+            .popup-link {
+                font-family: "RobotoRegular";
+                font-size: 23px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 27px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #ffffff;
+                position: relative;
+                text-decoration: underline;
+                cursor: pointer;
+                width: 100%;
+
+                &:hover {
+                    color: #ffcc00;
+                }
+            }
+        }
+
+        &__icons-team {
+            display: flex;
+
+            img {
+                padding: 0 12px;
+            }
+        }
     }
 }

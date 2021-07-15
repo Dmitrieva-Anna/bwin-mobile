@@ -7,14 +7,116 @@
     left: 0;
     opacity: 0;
     visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
     transition: all 0.8s ease 0s;
+}
+
+.popup__body {
+    // min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.popup__content {
+    // background-color: #171717;
+    // color: #FFFFFF;
+    // max-width: 600px;
+    // max-height: 1040px;
+    // padding: 33px 52px 37px 45px;
+    // position: relative;
+    // overflow-x: hidden;
+
+    padding: 45px;
+    // overflow-y: auto;
+    background-color: #171717;
+    position: relative;
+
+    .all {
+        color: #ffffff;
+        max-width: 600px;
+        max-height: 1040px;
+        padding: 0 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2e2e2e;
+    box-shadow: 0px 0px 3px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 1px #fff inset;
+    background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::-webkit-resizer {
+    width: 9px;
+    height: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 163px;
+}
+
+.popup__title {
+    font-family: "Druk Wide", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.popup__text {
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 45px;
+
+    li {
+        color: #ffcc00;
+        margin-bottom: 33px;
+        margin-left: 25px;
+
+        span {
+            color: #ffffff;
+        }
+    }
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
 }
 
 .popup.open {
     opacity: 1;
     visibility: visible;
+}
+
+.popup__close {
+    position: absolute;
+    font-size: 19px;
+    right: 25px;
+    top: 25px;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .popup.open .popup__content {
@@ -30,10 +132,6 @@
     left: 0;
 }
 
-.popup__body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+body.lock {
+    overflow: hidden;
 }
