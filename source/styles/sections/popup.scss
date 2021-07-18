@@ -117,6 +117,10 @@
     top: 25px;
     text-decoration: none;
     color: #ffffff;
+
+    &:hover {
+        color: red;
+    }
 }
 
 .popup.open .popup__content {

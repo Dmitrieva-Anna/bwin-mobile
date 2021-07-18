@@ -3,7 +3,7 @@ var popupLinks = document.querySelector('.popup-link');
 var lockPadding = document.querySelector('.lock-padding');
 
 var unlock = true;
-var doUnLock = true;
+// var doUnLock = true;
 
 var timeout = 800;
 
@@ -77,7 +77,7 @@ function bodyUnLock() {
         if (lockPadding.length > 0) {
             for (var n = 0; n < lockPadding.length; n++) {
                 var element = array[n];
-                el.style.paddingRight = '0px';
+                element.style.paddingRight = '0px';
             }
         }
         body.style.paddingRight = '0px';
@@ -92,7 +92,7 @@ function bodyUnLock() {
 }
 
 document.addEventListener('keydown', function (e) {
-    if (e.key === 27) {
+    if (e.code === 27) {
         var popupActive = document.querySelector('.popup.open');
         popupClose(popupActive);
     };

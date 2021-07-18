@@ -1,4 +1,4 @@
-const gulp         = require('gulp'),
+const gulp       = require('gulp'),
     sass         = require('gulp-sass'),
     browsersync  = require('browser-sync').create(),
     del          = require('del'),
