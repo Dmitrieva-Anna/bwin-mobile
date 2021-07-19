@@ -13,8 +13,8 @@ $vw-viewport: 320;
     }
 
     .header {
-        padding: 21px 0 15px 0;
-        
+        padding: 21px 0 0 0;
+
         &__logo {
             width: 66px;
             height: 22px;
@@ -22,8 +22,6 @@ $vw-viewport: 320;
     }
 
     .two-block {
-        // grid-template-columns: repeat(auto-fit, 289px);
-
         &__row {
             flex-direction: column;
             height: 47%;
@@ -32,19 +30,13 @@ $vw-viewport: 320;
         &__info {
             padding: 0 !important;
             max-width: 231px !important;
-            margin-bottom: 27px;
-            
         }
 
         &__player-img {
-            // flex: 0 0 50%;
-            // flex: 0 1 280px;
             min-width: 280px;
             align-self: center;
-            // height: 239px;
 
             img {
-                // display: block;
                 max-width: 100%;
                 height: 233px !important;
             }
@@ -54,14 +46,13 @@ $vw-viewport: 320;
     .insurance {
         text-align: center;
         margin-bottom: 8px !important;
-        
 
         &__itext-1 {
             text-align: center !important;
             font-size: gets-vw(31px) !important;
             line-height: 31px;
             letter-spacing: 0 !important;
-            letter-spacing: .4rem !important;
+            letter-spacing: 0.4rem !important;
         }
 
         &__itext-2 {
@@ -69,7 +60,7 @@ $vw-viewport: 320;
             font-size: gets-vw(22px) !important;
             line-height: 22px;
             letter-spacing: 0 !important;
-            letter-spacing: .3rem !important;
+            letter-spacing: 0.3rem !important;
         }
     }
 
@@ -80,21 +71,16 @@ $vw-viewport: 320;
             text-align: center !important;
             font-size: gets-vw(12px) !important;
             line-height: 15px;
-            
         }
 
         &__dtext-2 {
             text-align: center !important;
             font-size: gets-vw(10px) !important;
             line-height: 12px;
-            
         }
-
-
     }
 
     .percent {
-        text-align: center !important;
         font-size: gets-vw(53px) !important;
         line-height: 69px;
     }
@@ -104,28 +90,22 @@ $vw-viewport: 320;
         height: 38px !important;
         font-size: 15px !important;
         font-style: normal;
-        font-weight: 700;
-        line-height: 18px;
         letter-spacing: 0em;
-        text-align: center;
         display: flex;
         margin: 0 auto;
         border-radius: 5px !important;
-        margin-bottom: 27px;
-
+        margin-bottom: 18px;
     }
 
     .footer {
         min-height: 66px;
-        top: 92%;
+        top: 89%;
 
         .ft-container {
             height: 100%;
             max-width: 350px;
             margin: 0 auto;
             padding: 0;
-            display: flex;
-            align-items: center;
         }
 
         .three-block {
@@ -169,43 +149,46 @@ $vw-viewport: 320;
     }
 
     .popup {
-        // width: 278px !important;
-        // height: 400px !important;
         top: 0;
         left: 0;
+        align-items: flex-start;
     }
 
     .popup__body {
-        width: 230px !important;
-        height: 400px !important;
         padding: 0;
     }
 
     .popup__content {
-        padding: 0;
-        width: 230px !important;
-        height: 400px !important;
-        // overflow-y: auto;
+        padding: 10px;
         background-color: #171717;
         position: relative;
-    
+        top: 95px;
+
         .all {
             color: #ffffff;
-            max-width: 600px;
-            max-height: 1040px;
-            padding: 0 10px;
-            overflow-x: hidden;
-            overflow-y: auto;
+            max-width: 278px;
+            max-height: 355px;
         }
     }
 
     .popup__title {
         font-size: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
-    
+
     .popup__text {
         font-size: 12px;
-        margin-bottom: 45px;
+        margin-bottom: 20px;
+        line-height: 16px;
+
+        li {
+            margin: 0 15px;
+        }
+    }
+
+    .popup__close {
+        font-size: 12px;
+        right: 12px;
+        top: 12px;
     }
 }
