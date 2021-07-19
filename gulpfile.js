@@ -11,7 +11,13 @@ const gulp       = require('gulp'),
     uglify       = require('gulp-uglify'),
     concat       = require('gulp-concat'),
     pump         = require('pump');
+    ghPages      = require('gh-pages');
+    paths         = require('path');
 
+function deploy(cb) {
+    ghPages.publish(paths.join(process.cwd(), './build'), cb);
+};
+exports.deploy = deploy;
 
 const path = {
     build:    './build',
